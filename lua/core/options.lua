@@ -1,6 +1,3 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
 vim.opt.backspace = '2'
 vim.opt.showcmd = true
 vim.opt.laststatus = 2
@@ -37,4 +34,4 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 
 -- spell
-vim.opt.spell = true
+vim.opt.spell = false
