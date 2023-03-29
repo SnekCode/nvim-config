@@ -11,7 +11,8 @@ vim.opt.relativenumber = true
 
 vim.opt.wrap = false
 
-vim.opt.updatetime = 50
+vim.opt.updatetime = 1000
+
 vim.opt.colorcolumn = "80"
 
 -- use spaces for tabs and whatnot
