@@ -15,9 +15,14 @@ vim.keymap.set('n', '<leader>so', ':luafile ~/.config/nvim/init.lua<CR>')
 vim.keymap.set('n', '<leader>bd', ':bd<CR>')
 
 -- write and quit maps
-vim.keymap.set('n', '<leader>q', ':q<CR>')
-vim.keymap.set('n', '<leader>Q', ':q!<CR>')
+vim.keymap.set('n', '<leader>q', function() vim.cmd([[
+    bd
+    bn
+    ]]) end)
+vim.keymap.set('n', '<leader>Q', ':bd!|bn<CR>')
+vim.keymap.set('n', '<leader>QQ', ':qa!<CR>')
 vim.keymap.set('n', '<leader>w', ':wa<CR>')
+vim.keymap.set('n', '<leader>W', ':wq<CR>')
 
 -- line moves
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -44,3 +49,8 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+vim.keymap.set("n", "<leader>r", ":echo hello<CR>")
+
+-- delete marks
+vim.keymap.set("n", "dm", "<cmd>delmarks A-Z0-9<CR>", {silent = true})
