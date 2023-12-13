@@ -1,3 +1,6 @@
+if not vim.g.term then
+  do return end
+end
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")

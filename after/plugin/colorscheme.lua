@@ -1,3 +1,6 @@
+if not vim.g.term then
+  do return end
+end
 local dracula = require("dracula")
 dracula.setup({
   -- customize dracula color palette

@@ -1,3 +1,6 @@
+if not vim.g.term then
+  do return end
+end
 require('telescope').setup()
 local builtin = require('telescope.builtin')
 

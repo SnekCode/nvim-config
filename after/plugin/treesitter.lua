@@ -1,3 +1,6 @@
+if not vim.g.term then
+  do return end
+end
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all"
   ensure_installed = { "c", "lua", "rust", "ruby", "vim", "python", "javascript", "typescript" },

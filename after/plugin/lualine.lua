@@ -1,3 +1,6 @@
+if not vim.g.term then
+  do return end
+end
 require('lualine').setup {
   options = {
     icons_enabled = true,

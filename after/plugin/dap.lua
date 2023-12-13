@@ -1,3 +1,6 @@
+if not vim.g.term then
+  do return end
+end
 local dap, dapui, dap_python = require("dap"), require("dapui"), require('dap-python')
 dap_python.setup('$CONDA_PREFIX/bin/python3')
 -- table.insert(dap.configurations.python, {
