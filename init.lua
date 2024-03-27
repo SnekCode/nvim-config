@@ -2,6 +2,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 
+
 if vim.g.vscode then
   -- require("vscode.plugins")
         require("vscode.keybinds")

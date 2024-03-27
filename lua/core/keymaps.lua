@@ -14,6 +14,10 @@ vim.keymap.set('n', '<leader>so', ':luafile ~/.config/nvim/init.lua<CR>')
 -- quick buffer close 
 vim.keymap.set('n', '<leader>bd', ':bd<CR>')
 
+-- next/prev buffer (tabs)
+vim.keymap.set('n', '<leader><Tab>', ":bnext<CR>")
+vim.keymap.set('n', '<leader><S-Tab>', ":bprev<CR>")
+
 -- write and quit maps
 vim.keymap.set('n', '<leader>q', function() vim.cmd([[
     bd
@@ -50,7 +54,20 @@ vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>r", ":echo hello<CR>")
-
 -- delete marks
 vim.keymap.set("n", "dm", "<cmd>delmarks A-Z0-9<CR>", {silent = true})
+
+-- Window Buffer Management
+
+vim.keymap.set("n", "<leader>swh", "<cmd>topleft vnew<CR>")
+vim.keymap.set("n", "<leader>swl", "<cmd>botright vnew<CR>")
+vim.keymap.set("n", "<leader>swk", "<cmd>topleft new<CR>")
+vim.keymap.set("n", "<leader>swj", "<cmd>botright new<CR>")
+
+vim.keymap.set("n", "<leader>sh", "<cmd>leftabove vnew<CR>")
+vim.keymap.set("n", "<leader>sl", "<cmd>rightbelow vnew<CR>")
+vim.keymap.set("n", "<leader>sk", "<cmd>leftabove new<CR>")
+vim.keymap.set("n", "<leader>sj", "<cmd>rightbelow new<CR>")
+
+
+vim.keymap.set("n", "<leader>b>", "<cmd>ls<CR><cmd>b")

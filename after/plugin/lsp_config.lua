@@ -60,6 +60,8 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
   vim.keymap.set("n", "<leader>dw", function() vim.diagnostic.setqflist() end, opts)
+
+  vim.keymap.set('n', '<leader>r', ':LspRestart<CR>')
 end)
 
 lsp.setup()
